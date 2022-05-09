@@ -19,7 +19,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="feedget-nwl-return-impulse" title="#feedget-nwl-return-impulse" src="./github/logo.svg" />
+    <img alt="feedget-nwl-return-impulse" title="#feedget-nwl-return-impulse" src="./.github/logo.svg" />
 </h1>
 
 <p align="center">
@@ -32,7 +32,7 @@
 </p>
 
 <div align="center"> 
-	<img alt="feedget-nwl-return-impulse" title="#feedget-nwl-return-impulse" src="./github/banner.PNG" />
+	<img alt="feedget-nwl-return-impulse" title="#feedget-nwl-return-impulse" src="./.github/banner.PNG" />
 </div>
 
 ## About
