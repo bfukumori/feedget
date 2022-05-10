@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DarkThemeToggleButton from "./components/DarkThemeToggleButton/DarkThemeToggleButton";
+import { Header } from "./components/Header/Header";
 import { Widget } from "./components/Widget";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
 
   return (
     <>
+      <Header isDarkTheme={isDarkTheme}/>
       <DarkThemeToggleButton isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme} />
       <Widget />
     </>
