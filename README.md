@@ -49,7 +49,7 @@ Project developed during the NLW Return Week from [Rocketseat](https://www.rocke
 - [ ] Dashboard with all created feedbacks
 - [ ] Filter feedbacks
 - [ ] Login with Github
-- [ ] Light/Dark Theme
+- [x] Light/Dark Theme
 ---
 
 ## How it works
