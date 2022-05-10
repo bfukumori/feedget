@@ -1,5 +1,5 @@
-import { IMailAdapter } from "../adapters/IMailAdapter";
-import { IFeedbacksRepository } from "../repositories/IFeedbacksRepository";
+import { IMailAdapter } from "../../adapters/IMailAdapter";
+import { IFeedbacksRepository } from "../../repositories/IFeedbacksRepository";
 
 interface ICreateFeedbacksServiceRequest {
   type: string;

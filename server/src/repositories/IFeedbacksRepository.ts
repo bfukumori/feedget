@@ -1,3 +1,5 @@
+import { Feedback } from "@prisma/client";
+
 export interface IFeedbackCreateDTO {
   type: string;
   comment: string;
@@ -6,4 +8,5 @@ export interface IFeedbackCreateDTO {
 
 export interface IFeedbacksRepository {
   create: (data:IFeedbackCreateDTO) => Promise<void>;
+  list: ()=> Promise<Feedback[]>
 }

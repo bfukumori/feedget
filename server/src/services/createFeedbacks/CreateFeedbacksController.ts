@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { NodemailerMailAdapter } from "../adapters/nodemailer/MailAdapter";
-import { PrismaFeedbacksRepository } from "../repositories/prisma/FeedbacksRepository";
+import { NodemailerMailAdapter } from "../../adapters/nodemailer/MailAdapter";
+import { PrismaFeedbacksRepository } from "../../repositories/prisma/FeedbacksRepository";
 import { CreateFeedbacksService } from "./CreateFeedbacksService";
 
 export class CreateFeedbacksController {
