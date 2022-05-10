@@ -23,7 +23,8 @@ export function ScreenshotButton({onScreenshotTook , screenshot}: ScreenshotButt
     return (
       <button
         type="button"
-        className="p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-zinc-400 hover:text-zinc-100 transition-colors"
+        className="p-1 w-10 h-10 rounded-md border-transparent flex justify-end items-end text-light-surface_secondary-300 
+        dark:text-dark-surface_secondary-300 hover:text-light-surface_secondary-500 dark:hover:text-dark-surface_secondary-500 transition-colors"
         title="Photo Preview"
         style={{
           backgroundImage: `url(${screenshot})`,
@@ -32,7 +33,7 @@ export function ScreenshotButton({onScreenshotTook , screenshot}: ScreenshotButt
         }}
         onClick={()=> onScreenshotTook(null)}
       >
-        <Trash weight="fill"/>
+        <Trash weight="fill" className="text-brand-300 hover:text-brand-500 transition-colors"/>
       </button>
     )
   }
@@ -40,10 +41,11 @@ export function ScreenshotButton({onScreenshotTook , screenshot}: ScreenshotButt
     <button
       type="button"
       onClick={handleTakeScreenshot}
-      className="p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500"
+      className="p-2 bg-light-surface_secondary-300 dark:bg-dark-surface_secondary-300 rounded-md border-transparent hover:bg-light-surface_secondary-500 dark:hover:bg-dark-surface_secondary-500  transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-surface_primary dark:focus:ring-offset-dark-surface_primary focus:ring-brand-500
+      disabled:opacity-50"
       title="Enviar foto"
     >
-      {isTakingScreenshot ? <Loading /> : <Camera className="w-6 h-6"/>}
+      {isTakingScreenshot ? <Loading /> : <Camera className="w-6 h-6 text-light-text_primary dark:text-dark-text_primary"/>}
       
     </button>
 
