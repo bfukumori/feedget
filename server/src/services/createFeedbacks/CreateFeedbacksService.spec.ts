@@ -3,12 +3,13 @@ import { CreateFeedbacksService } from "./CreateFeedbacksService"
 let createFeedbacksService: CreateFeedbacksService;
 
 const createFeedbacksSpy = jest.fn();
+const listFeedbacksSpy = jest.fn();
 const sendMailSpy = jest.fn();
 
 describe('Create feedback', ()=>{
   beforeAll(()=> {
     createFeedbacksService = new CreateFeedbacksService(
-      { create: createFeedbacksSpy },
+      { create: createFeedbacksSpy, list:listFeedbacksSpy },
       { sendMail: sendMailSpy }
     );
   })
