@@ -9,8 +9,8 @@ export default function DarkThemeToggleButton({isDarkTheme, toggleDarkTheme} : D
  
   return (
     <Switch.Group>
-      <div className="absolute top-4 right-4 md:top-4 md:right-8 items-end">
-        <Switch.Label className="mr-4 text-dark-text_secondary">Dark theme</Switch.Label>
+      <div className='flex items-center'>
+        <Switch.Label className="mr-8 text-light-text_primary dark:text-dark-text_primary">Dark theme</Switch.Label>
         <Switch
           checked={isDarkTheme}
           onChange={toggleDarkTheme}

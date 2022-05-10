@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bell, List, X } from 'phosphor-react'
 import logo from '../../assets/logo.svg'
 import logoSm from '../../assets/logo-small.svg'
+import DarkThemeToggleButton from '../DarkThemeToggleButton/DarkThemeToggleButton'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
@@ -15,9 +16,10 @@ function classNames(...classes: string[]) {
 
 interface HeaderProps {
   isDarkTheme: boolean;
+  toggleDarkTheme: () => void;
 }
 
-export function Header({isDarkTheme}:HeaderProps) {
+export function Header({isDarkTheme, toggleDarkTheme}:HeaderProps) {
   return (
     <Disclosure as="nav" className="bg-dark-surface_primary">
       {({ open }) => (
@@ -26,7 +28,7 @@ export function Header({isDarkTheme}:HeaderProps) {
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-dark-text_primary hover:text-dark-text_secondary hover:bg-dark-surface_secondary-300 focus:outline-none transition-colors focus:ring-2 focus:ring-offset-2 focus:focus:ring-offset-dark-surface_primary focus:ring-brand-500">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <X className="block h-6 w-6" aria-hidden="true" />
@@ -96,12 +98,12 @@ export function Header({isDarkTheme}:HeaderProps) {
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className={classNames(isDarkTheme ? 'bg-dark-surface_secondary-300' : 'bg-light-surface_primary',"origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 focus:outline-none")}>
+                    <Menu.Items className={classNames( 'dark:bg-dark-surface_secondary-300 bg-light-surface_primary origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 ring-1 ring-black ring-opacity-5 focus:outline-none')}>
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-light-surface_secondary-500' : '', 'block px-4 py-2 text-sm', isDarkTheme ? 'text-dark-text_primary ' : 'text-light-text_primary', isDarkTheme && active ? 'bg-dark-surface_secondary-500' :  '')}
+                            className={classNames(active ? 'bg-light-surface_secondary-500 dark:bg-dark-surface_secondary-500' : '', 'block px-4 py-2 text-sm dark:text-dark-text_primary text-light-text_primary')}
                           >
                             Your Profile
                           </a>
@@ -111,9 +113,10 @@ export function Header({isDarkTheme}:HeaderProps) {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-light-surface_secondary-500' : '', 'block px-4 py-2 text-sm', isDarkTheme ? 'text-dark-text_primary' : 'text-light-text_primary',isDarkTheme && active ? 'bg-dark-surface_secondary-500' :  '')}
+                            className={classNames(active ? 'bg-light-surface_secondary-500 dark:bg-dark-surface_secondary-500' : '', 'block px-4 py-2 text-sm dark:text-dark-text_primary text-light-text_primary')}
+                            title='Dark Theme Button'
                           >
-                            Settings
+                            <DarkThemeToggleButton isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme} />
                           </a>
                         )}
                       </Menu.Item>
@@ -121,7 +124,7 @@ export function Header({isDarkTheme}:HeaderProps) {
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-light-surface_secondary-500' : '', 'block px-4 py-2 text-sm', isDarkTheme ? 'text-dark-text_primary' : 'text-light-text_primary', isDarkTheme && active ? 'bg-dark-surface_secondary-500' :  '')}
+                            className={classNames(active ? 'bg-light-surface_secondary-500 dark:bg-dark-surface_secondary-500' : '', 'block px-4 py-2 text-sm dark:text-dark-text_primary text-light-text_primary')}
                           >
                             Sign out
                           </a>
@@ -142,8 +145,8 @@ export function Header({isDarkTheme}:HeaderProps) {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    item.current ? 'bg-dark-surface_secondary-300 text-dark-text_primary' : 'text-dark-text_secondary hover:bg-dark-surface_secondary-500 hover:text-dark-text_primary',
+                    'block px-3 py-2 rounded-md text-base font-medium transition-colors'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

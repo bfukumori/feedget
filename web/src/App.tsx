@@ -15,8 +15,7 @@ export default function App() {
 
   return (
     <>
-      <Header isDarkTheme={isDarkTheme}/>
-      <DarkThemeToggleButton isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme} />
+      <Header isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme}/>
       <Widget />
     </>
   )
