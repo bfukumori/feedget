@@ -17,7 +17,7 @@ export default function App() {
 
   useEffect(()=>{
     async function fetchFeedbacks() {
-      const response = await api('https://feedget-nwl-return-impulse.vercel.app/feedbacks');
+      const response = await api('https://feedget-nwl-return-impulse.herokuapp.com/feedbacks');
       return console.log(response)
     }
     fetchFeedbacks()
