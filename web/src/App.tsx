@@ -1,3 +1,4 @@
+import { Feedback } from "@prisma/client";
 import { useEffect, useState } from "react";
 import { Header } from "./components/Header/Header";
 import { Widget } from "./components/Widget";
@@ -6,7 +7,7 @@ import { api } from "./lib/api";
 export default function App() {
   const [isDarkTheme, setIsDarkTheme] = useState(false);
   const body = document.querySelector('body');
-  const [feedbacks, setFeedbacks] = useState([]);
+  const [feedbacks, setFeedbacks] = useState<Feedback[]>([]);
 
   useEffect(()=>{
     async function fetchFeedbacks() {
@@ -26,6 +27,7 @@ export default function App() {
     <>
       <Header isDarkTheme={isDarkTheme} toggleDarkTheme={toggleDarkTheme}/>
       <Widget />
+      {feedbacks.map((feedback)=> feedback.type)}
     </>
   )
 }
