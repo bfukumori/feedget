@@ -1,7 +1,7 @@
 import bugImageUrl from '../../assets/bug.svg';
 import ideaImageUrl from '../../assets/idea.svg';
 import thoughtImageUrl from '../../assets/thought.svg';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FeedbackTypeStep } from "./Steps/FeedbackTypeStep";
 import { FeedbackContentStep } from './Steps/FeedbackContentStep';
 import { FeedbackSuccessStep } from './Steps/FeedbackSuccesStep';
@@ -34,7 +34,11 @@ export const feedbackTypes = {
 
 export type FeedbackType = keyof typeof feedbackTypes
 
-export function WidgetForm() {
+interface WidgetFormProps {
+  onFetchData: () => Promise<void>
+}
+
+export function WidgetForm({onFetchData}:WidgetFormProps) {
   const [feedbackType, setFeedbackType] = useState<FeedbackType | null>(null);
   const [feedbackSent, setFeedbackSent] = useState(false);
 
@@ -42,6 +46,10 @@ export function WidgetForm() {
     setFeedbackType(null);
     setFeedbackSent(false);
   }
+
+  useEffect(()=> {
+    onFetchData();
+  },[feedbackSent])
 
   return (
     <div className="bg-light-background dark:bg-dark-surface_primary p-4 relative rounded-2xl mb-4 flex flex-col items-center shadow-lg w-[calc(100vw-2rem)] md:w-auto">

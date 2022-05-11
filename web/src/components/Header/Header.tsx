@@ -78,7 +78,7 @@ export function Header({isDarkTheme, toggleDarkTheme}:HeaderProps) {
                 </button>
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="ml-3 relative">
+                <Menu as="div" className="ml-3 relative z-10">
                   <div>
                     <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:focus:ring-offset-dark-surface_primary focus:ring-brand-500">
                       <span className="sr-only">Open user menu</span>
