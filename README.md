@@ -46,9 +46,10 @@ Project developed during the NLW Return Week from [Rocketseat](https://www.rocke
 ## Features
 
 - [x] Create a feedback
-- [ ] Dashboard with all created feedbacks
+- [x] Dashboard with all created feedbacks
 - [ ] Filter feedbacks
-- [ ] Login with Github
+- [ ] Login and Authentication
+- [ ] Add CRUD routes
 - [x] Light/Dark Theme
 ---
 
