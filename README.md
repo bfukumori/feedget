@@ -128,6 +128,11 @@ The following tools were used in the construction of the project:
 - **[Vite](https://vitejs.dev/)**
 - **[Tailwindcss](https://tailwindcss.com/)**
 
+#### **Server**  ([Nodejs](https://nodejs.org/en/)  +  [TypeScript](https://www.typescriptlang.org/))
+
+- **[Prisma](https://www.prisma.io/)**
+- **[Nodemailer](https://nodemailer.com/about/)**
+- **[Expressjs](https://expressjs.com/pt-br/)**
 
 ---
 ## Author
