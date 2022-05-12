@@ -59,7 +59,7 @@ Project developed during the NLW Return Week from [Rocketseat](https://www.rocke
 
 Before you begin, you will need to have the following tools installed on your machine:
 [Git] (https://git-scm.com), [Node.js] (https://nodejs.org/en/).
-In addition, it is good to have an editor to work with the code like [VSCode] (https://code.visualstudio.com/).
+In addition, it is good to have an editor to work with the code like [VSCode] (https://code.visualstudio.com/) and Expo app (if using mobile version) [Android] (https://play.google.com/store/apps/details?id=host.exp.exponent) or [iOS] (https://apps.apple.com/app/expo-go/id982107779). 
 
 Create an account and configure this external service if you want to use a fake mail:
 
@@ -114,6 +114,29 @@ $ npm run dev
 
 ---
 
+#### Running the mobile app
+
+```bash
+
+# Clone this repository
+$ git clone git@github.com:bfukumori/feedget-nwl-return-impulse.git
+
+# Access the project folder in your terminal
+$ cd feedget-nwl-return-impulse/mobile
+
+# Install the dependencies
+$ npm install
+
+# Install the expo cli
+$ npm install --global expo-cli
+
+# Run the application in development mode
+$ expo start
+
+```
+
+---
+
 ## Tech Stack
 
 The following tools were used in the construction of the project:
@@ -133,6 +156,12 @@ The following tools were used in the construction of the project:
 - **[Prisma](https://www.prisma.io/)**
 - **[Nodemailer](https://nodemailer.com/about/)**
 - **[Expressjs](https://expressjs.com/pt-br/)**
+
+#### **Mobile**  ([React Native](https://reactnative.dev/)  +  [TypeScript](https://www.typescriptlang.org/))
+
+- **[Expo](https://expo.dev/)**
+- **[phosphor-react](https://phosphoricons.com/)**
+- **[Axios](https://axios-http.com/)**
 
 ---
 ## Author
