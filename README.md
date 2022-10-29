@@ -13,7 +13,7 @@
     <img alt="Stargazers" src="https://img.shields.io/github/stars/bfukumori/feedget-nwl-return-impulse?style=social">
   </a>
 
-  <a href="https://feedget-nwl-return-impulse.vercel.app/">
+  <a href="">
     <img alt="feedget-nwl-return-impulse" src="https://img.shields.io/badge/feedget-%237159c1?style=flat&logo=ghost">
   </a>
 </p>
